@@ -1,0 +1,5 @@
+cafe bebida 10
+leche bebida 20
+manzana fruta 50
+leche lacteos 30
+panaderia pan 20
