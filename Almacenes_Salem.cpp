@@ -107,6 +107,31 @@ void mostrarCategorias(Producto productos[], int numProductos) {
     }
 }
 
+// Funcion para consultar categoria 
+void consultarCategorias(Producto productos[], int numProductos, SegmentTree &segTree, string start, string end)
+{
+    int totalStock = 0;
+    bool rango = false;
+
+    for (int i = 0; i < numProductos; i++)
+    {
+
+        if (productos[i].categoria == start)
+        {
+            rango = true; 
+        } if (rango)
+        {
+            totalStock += segTree.query(i, i);
+        } if (productos[i].categoria == end)
+        {
+            break;
+        }
+    }
+    cout << "Stock entre categoría '" << start << "' y '" << end << "': " << totalStock << "\n";
+
+}
+
+
 int main() {
     Producto productos[MAX_PRODUCTOS];
     int stock[MAX_PRODUCTOS];
@@ -120,6 +145,7 @@ int main() {
     // Mostrar categorías únicas al inicio
     mostrarCategorias(productos, numProductos);
 
+
     int opcion;
     do {
         cout << "\n--- Menú ---\n";
@@ -127,7 +153,8 @@ int main() {
         cout << "2. Actualizar stock\n";
         cout << "3. Consultar stock por producto\n";
         cout << "4. Consultar stock por categoría\n";
-        cout << "5. Salir\n";
+        cout << "5. Consultar por rango\n";
+        cout << "6. Salir\n";
         cout << "Seleccione una opción: ";
         cin >> opcion;
 
@@ -196,7 +223,18 @@ int main() {
             }
             cout << "Stock total de la categoría '" << categoria << "': " << totalStock << "\n";
 
-        } else if (opcion == 5) {
+        } else if (opcion == 5)
+        {
+         
+            string start, end;
+            cout << "Ingrese la categoría de inicio: ";
+            cin.ignore(); 
+            getline(cin, start); 
+            cout << "Ingrese la categoría de fin: ";
+            getline(cin, end);
+            consultarCategorias(productos, numProductos, segTree, start, end);
+
+        }else if (opcion == 6) {
             cout << "Saliendo...\n";
         } else {
             cout << "Opción inválida.\n";

@@ -1,5 +1,27 @@
-cafe bebida 10
-leche bebida 20
-manzana fruta 50
-leche lacteos 30
-panaderia pan 20
+Arroz Alimentos 150  
+Panaderia Alimentos 240  
+Jabon Higiene 85  
+Shampoo Higiene 320  
+Aceite Cocina 210  
+Harina Alimentos 190  
+Cafe Bebidas 70  
+Leche Alimentos 45  
+Azucar Alimentos 300  
+Galletas Alimentos 60  
+Queso Alimentos 95  
+Papel Higiene 120  
+Detergente Limpieza 430  
+Sal Alimentos 110  
+Refresco Bebidas 130  
+Cerveza Bebidas 75  
+Sopa Alimentos 270  
+Pasta Alimentos 40  
+Cereal Alimentos 310  
+Agua Bebidas 25  
+cafe Bebida 10
+leche Bebida 20
+manzana Fruta 50
+leche Lacteos 30
+panaderia Pan 20
+
+
